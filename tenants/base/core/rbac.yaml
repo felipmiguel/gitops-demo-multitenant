@@ -6,7 +6,6 @@ metadata:
     istio-injection: enabled
     toolkit.fluxcd.io/tenant: core
   name: core
-
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -36,4 +35,3 @@ subjects:
 - kind: ServiceAccount
   name: core
   namespace: core
-

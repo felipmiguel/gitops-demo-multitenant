@@ -6,7 +6,6 @@ metadata:
     istio-injection: enabled
     toolkit.fluxcd.io/tenant: data
   name: data
-
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -16,7 +15,6 @@ metadata:
     toolkit.fluxcd.io/tenant: data
   name: data
   namespace: data
-
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -37,4 +35,3 @@ subjects:
 - kind: ServiceAccount
   name: data
   namespace: data
-
