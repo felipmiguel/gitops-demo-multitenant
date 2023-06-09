@@ -11,7 +11,7 @@ spec:
     branch: main
   secretRef:
     name: flux-system
-  url: ssh://git@github.com/felipmiguel/gitops-demo-multitenant
+  url: https://github.com/felipmiguel/gitops-demo-multitenant.git
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
