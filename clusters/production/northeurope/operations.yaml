@@ -6,7 +6,7 @@ metadata:
 spec:
   dependsOn:
   - name: kyverno-policies
-  interval: 10m0
+  interval: 2m0
   sourceRef:
     kind: GitRepository
     name: flux-system
@@ -22,7 +22,7 @@ metadata:
 spec:
   dependsOn:
   - name: operations-releases
-  interval: 10m0s
+  interval: 2m0s
   sourceRef:
     kind: GitRepository
     name: flux-system
