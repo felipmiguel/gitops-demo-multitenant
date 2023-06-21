@@ -6,6 +6,8 @@ export GITHUB_REPO=gitops-demo-tenant-${tenant}
 
 kubectl config use-context "k3d-${cluster}"
 
+kubectl create namespace ${tenant}
+
 echo 'Setup RBAC...'
 flux create tenant ${tenant} \
 --label=istio-injection=enabled \
@@ -35,11 +37,11 @@ sed -i 's/flux-system/'${tenant}'/g' ${tenant}-secret.yaml
 
 kubectl apply -f ${tenant}-secret.yaml
 
-echo "Install the metrics server..."
-kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+# echo "Install the metrics server..."
+# kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 
 
-echo "Validate critical app..."
+# echo "Validate critical app..."
 
 
 # ./scripts/make-requests.sh podinfo.staging.eun

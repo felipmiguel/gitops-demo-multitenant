@@ -21,7 +21,7 @@ while true; do
         if [[ "$content" == *".0.0"* ]]; then
             echo "$content"
         else
-            echo "$content" | lolcat
+            echo "$content" 
         fi
     fi
     sleep 1
