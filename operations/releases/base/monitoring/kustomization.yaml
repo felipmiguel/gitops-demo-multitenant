@@ -10,5 +10,5 @@ resources:
 - prometheus-adapter.yaml
 - promtail.yaml
 - tempo-distributed.yaml
-- thanos.yaml
-- mimir.yaml
+# - thanos.yaml
+# - mimir.yaml
